@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemons</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <header class="py-10">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <a href="/">
+          <img src="https://tcg.pokemon.com/assets/img/global/logos/en-us/tcg-logo-2x.png" width="155" height="84" alt="Site logo img">
+        </a>
+        <nav class="">
+          <ul class="text-white flex items-center gap-x-8">
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#">EXPANSIONS</a>
+            </li>
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#cards">CARDS</a>
+            </li>
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#">TCG LIVE</a>
+            </li>
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#">HOW TO PLAY</a>
+            </li>
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#">NEWS</a>
+            </li>
+            <li class="">
+              <a class="text-[16px] font-serif font-bold hover:text-orange-400" href="#">WHERE TO BUY</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fpokemongolive.com%2Fpost%2Fpokemongo-7th-anniversary-art%2F&psig=AOvVaw3W109-xfQQSpEm08yJ5oYR&ust=1723104549787000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjHsvi24ocDFQAAAAAdAAAAABAE -->
+
+  <main>
+    <section class="">
+      <div class="featured-switcher-bg js-img-wrapper">
+        <picture>
+          <source media="(min-width: 64em)" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/pecharunt-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/pecharunt-large-up-2x.jpg ">
+
+          <img class="poke-img is-selected js-poke-1" src="https://tcg.pokemon.com/assets/img/home/featured-switcher/pecharunt-large-up-2x.jpg" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/pecharunt-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/pecharunt-large-up-2x.jpg" data-card-id="SV6pt5_EN_35" alt="Poke bg img">
+        </picture>
+        <picture>
+          <source media="(min-width: 64em)" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/okidogi-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/okidogi-large-up-2x.jpg">
+
+          <img class="poke-img js-poke-2" src="https://tcg.pokemon.com/assets/img/home/featured-switcher/okidogi-large-up.jpg" alt="Poke bg img" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/okidogi-large-up-2x.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/okidogi-large-up-2x.jpg" data-card-id="SV6pt5_EN_36">
+        </picture>
+        <picture>
+          <source media="(min-width: 64em)" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/munkidori-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/munkidori-large-up-2x.jpg">
+
+          <img class="poke-img js-poke-3" src="https://tcg.pokemon.com/assets/img/home/featured-switcher/munkidori-large-up.jpg" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/munkidori-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/munkidori-large-up-2x.jpg" data-card-id="SV6pt5_EN_37" alt="Poke bg img">
+        </picture>
+        <picture>
+          <source media="(min-width: 64em)" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/fezandipiti-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/fezandipiti-large-up-2x.jpg">
+
+          <img class="poke-img js-poke-4" src="https://tcg.pokemon.com/assets/img/home/featured-switcher/fezandipiti-large-up.jpg" alt="Poke bg img" srcset="https://tcg.pokemon.com/assets/img/home/featured-switcher/fezandipiti-large-up.jpg, https://tcg.pokemon.com/assets/img/home/featured-switcher/fezandipiti-large-up-2x.jpg" data-card-id="SV6pt5_EN_37">
+        </picture>
+      </div>
+      <div class="container">
+        <div class="flex items-center justify-between pt-[80px] pb-[72px]">
+          <div class="w-[456px] text-center">
+            <img src="https://tcg.pokemon.com/assets/img/sv-expansions/shrouded-fable/logo/en-us/sv6pt5-logo-2x.png" alt="Pokemon image" width="456" height="215">
+            <a class="custom-button font-serif font-bold inline-block mt-5" href="#">
+              GO TO THE EXPANSION PAGE
+            </a>
+            <a class="custom-button font-serif font-bold inline-block mt-5" href="#">
+              SEE CARD GALLERY
+            </a>
+          </div>
+          <div class="flip-container" id="flipContainer">
+            <div class="flipper">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-600 card-section py-10">
+      <div class="container">
+        <div class="w-full">
+          <h1 class="text-center text-[48px] font-sans font-bold text-yellow-500 mb-[60px]">
+            Welcome To The Pokemon Cards
+          </h1>
+          <ul class="js-poke-card-list flex flex-wrap justify-between gap-y-14" id="cards"></ul>
+        </div>
+      </div>
+    </section>
+    <footer class="py-10 border-t-2 bg-gray-600">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <a href="/">
+            <img src="https://tcg.pokemon.com/assets/img/global/logos/en-us/tcg-logo-2x.png" alt="Site logo" width="140" height="70">
+          </a>
+          <div class="text-white flex items-center gap-x-4">
+            <span>All rights reserved.</span>
+            <span>Terms of Service</span>
+            <span>Privacy Policy</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <!-- bd4a9b -->
+  <script src="./js/pokemons.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

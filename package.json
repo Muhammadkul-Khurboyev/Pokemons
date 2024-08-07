@@ -1,0 +1,15 @@
+{
+  "name": "pokemons",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./styles/tw.css -o ./styles/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}

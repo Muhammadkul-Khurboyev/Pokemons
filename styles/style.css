@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.featured-switcher-bg {
+  width: 100%;
+  height: 771px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  overflow: hidden;
+  z-index: -19;
+}
+.poke-img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1156px;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1);
+  transition: opacity 2s ease, transform 10s ease;
+  animation: scaleImgReverse 5s forwards ease-out;
+}
+
+.is-selected {
+  opacity: 1;
+  animation: scaleImg 10s ease-out;
+}
+
+@keyframes scaleImgReverse {
+  0% {
+    transform: scale(1.058);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes scaleImg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.custom-button {
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: #7b2f8e;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  clip-path: polygon(0% 0%, 100% 0%, 94% 100%, 6% 100%);
+  transition: all 0.3s ease;
+}
+
+.custom-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #c3f200;
+  clip-path: inherit;
+  z-index: -1;
+}
+
+
+.custom-button:hover {
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  background-color: #696969;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 344px;
+  height: 459px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-container.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url('https://us.v-cdn.net/6034460/uploads/DX73FYOS91N7/scarletviolet-category-homepage-card-344x459.png');
+  background-size: cover;
+}
+
+.back {
+  background-image: url('https://us.v-cdn.net/6034460/uploads/8HIZCJ8GEANG/game-card-unite.png');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.card-section {
+
+  background-image: url("	https://pokemonshowdown.com/images/bg-starfield.jpg");
+  /* background-repeat: no-repeat; */
+  /* background-position: left top; */
+}
+
+.card-list-item {
+  width: 300px;
+  padding: 20px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid #f0cc00;
+}
+
+.card-list-item:hover {
+  background-color: #f0cc00;
+}
+
+.card-list-item:hover span {
+  background-color: #fff;
+}
+
+.card-list-item:hover h3 {
+  color: #fff;
+}
+
+.card-list-item:hover p {
+  color: #fff;
+}
+
+.card-list-item:hover {
+  transform: scale(1.1);
+}
+.card-list-item:hover img {
+  transform: scale(1.2);
+}
+
+.card-item-num {
+  font-weight: 800;
+  padding: 5px;
+  background-color: #f7d114;
+  border-radius: 5px;
+}
+
+.card-item-img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card-item-name {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #c3f200;
+}
+.card-item-type {
+  font-size: 14px;
+  font-weight: 300;
+  color: #f7d114;
+}
